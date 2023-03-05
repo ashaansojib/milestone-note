@@ -1,1 +1,1 @@
-console.log()
+const greeting = 'Hello, world!';

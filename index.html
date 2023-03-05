@@ -11,6 +11,21 @@
       rel="stylesheet"
       type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .clock {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hours,
+.minutes,
+.seconds {
+  display: inline-block;
+  width: 50px;
+}
+
+    </style>
   </head>
   <body>
     <div id="outer-wrapper" class="lg:w-[1200px] mx-auto">
@@ -151,6 +166,25 @@
         </aside>
       </main>
     </div>
+    <div class="w-[500px] mx-auto text-center">
+      <h2 class="btn my-2" id="text">Count Start</h2>
+      <div>
+        <button class="btn" id="start">Start</button>
+        <button class="btn" id="run">Run</button>
+        <button class="btn" id="stop">Stop</button>
+      </div>
+    </div>
+    <script>
+      let num = 0;
+      const stInter = setInterval( () =>{
+        document.getElementById("text").innerText = num++;
+        
+      }, 1000);
+      // const interValId = (stInter, 1000);
+      document.getElementById("start").addEventListener('click', function(){
+        clearInterval(stInter)
+      })
+    </script>
     <!-- script tag -->
     <script src="practice.js"></script>
     <script src="/milestone-6/all-module.js"></script>
