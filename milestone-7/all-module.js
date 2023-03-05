@@ -1,4 +1,8 @@
-const displaData = () =>{
+/*
+This is milestone 7 note and question ans. In this file add all module practice and important topic. In this file you know what metter in this milestone.
+*/
+// this is module one in this milestone about more javascript concept and how dose work javscript
+const moduleOne = () =>{
     const container = document.getElementById("content");
     container.textContent = '';
     const createDiv = document.createElement("div");
@@ -19,9 +23,7 @@ const displaData = () =>{
                 <div class="mockup-code">
                 <pre data-prefix="$">
                     <code>
-                       function ( {
-                        hello
-                       })
+                    
                     </code>
                 </pre> 
                 <pre data-prefix=">" class="text-warning"><code>installing...</code></pre> 
@@ -32,8 +34,8 @@ const displaData = () =>{
     `;
     container.appendChild(createDiv);
 }
-
-const moduleTwoData = () =>{
+// this is module to in this milestone about
+const moduleTwo = () =>{
     const container = document.getElementById("content");
     container.textContent = '';
     const createDiv = document.createElement("div");
