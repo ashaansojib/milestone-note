@@ -1,193 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My All Module</title>
-    <!-- dysi ui -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css"
-      rel="stylesheet"
-      type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      .clock {
-  font-size: 48px;
-  font-weight: bold;
-  text-align: center;
-}
 
-.hours,
-.minutes,
-.seconds {
-  display: inline-block;
-  width: 50px;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My All Module</title>
+  <!-- dysi ui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .clock {
+      font-size: 48px;
+      font-weight: bold;
+      text-align: center;
+    }
 
-    </style>
-  </head>
-  <body>
-    <div id="outer-wrapper" class="lg:w-[1200px] mx-auto">
-      <!-- main container wrapper -->
-      <header>
-        <!-- header -->
-        <div class="navbar bg-gray-500 text-white">
-          <div class="navbar-start">
-            <div class="dropdown">
-              <label tabindex="0" class="btn btn-ghost lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16" />
-                </svg>
-              </label>
-              <ul
-                tabindex="0"
-                class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                <li><a>Item 1</a></li>
-                <li tabindex="0">
-                  <a class="justify-between">
-                    Parent
-                    <svg
-                      class="fill-current"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24">
-                      <path
-                        d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                    </svg>
-                  </a>
-                  <ul class="p-2">
-                    <li><a>Submenu 1</a></li>
-                    <li><a>Submenu 2</a></li>
-                  </ul>
-                </li>
-                <li><a>Item 3</a></li>
-              </ul>
-            </div>
-            <a class="font-medium text-2xl">My Note</a>
-          </div>
-          <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
+    .hours,
+    .minutes,
+    .seconds {
+      display: inline-block;
+      width: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="outer-wrapper" class="lg:w-[1200px] mx-auto">
+    <!-- main container wrapper -->
+    <header>
+      <!-- header -->
+      <div class="navbar bg-gray-500 text-white">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </label>
+            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Item 1</a></li>
               <li tabindex="0">
-                <a>
-                  MILESTONE-7
-                  <svg
-                    class="fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24">
-                    <path
-                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                  </svg>
-                </a>
-                <ul class="p-2 bg-slate-600">
-                  <li>
-                    <a onclick="displaData()" >Module-1: How JS And Browser Works</a>
-                  </li>
-                  <li><a onclick="moduleTwoData()">Submenu 2</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li tabindex="0">
-                <a>
-                  MILESTONE-6
-                  <svg
-                    class="fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24">
-                    <path
-                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                  </svg>
-                </a>
-                <ul class="p-2 bg-slate-600">
-                  <li><a href="./milestone-6/common.html">Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li tabindex="0">
-                <a>
+                <a class="justify-between">
                   Parent
-                  <svg
-                    class="fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
+                  <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24">
-                    <path
-                      d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                   </svg>
                 </a>
-                <ul class="p-2 bg-slate-600">
+                <ul class="p-2">
                   <li><a>Submenu 1</a></li>
                   <li><a>Submenu 2</a></li>
                 </ul>
               </li>
+              <li><a>Item 3</a></li>
             </ul>
           </div>
-          <div class="navbar-end">
-            <a class="btn">Get started</a>
+          <a class="font-medium text-2xl">My Note</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li tabindex="0">
+              <a>
+                MILESTONE-7
+                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                </svg>
+              </a>
+              <ul class="p-2 bg-slate-600">
+                <li>
+                  <a onclick="displaData()">Module-1: How JS And Browser Works</a>
+                </li>
+                <li><a onclick="moduleTwoData()">Submenu 2</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </li>
+            <li tabindex="0">
+              <a>
+                MILESTONE-6
+                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                </svg>
+              </a>
+              <ul class="p-2 bg-slate-600">
+                <li><a href="./milestone-6/common.html">Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </li>
+            <li tabindex="0">
+              <a>
+                Parent
+                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                </svg>
+              </a>
+              <ul class="p-2 bg-slate-600">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn">Get started</a>
+        </div>
+      </div>
+    </header>
+    <!-- main section -->
+    <main class="md:grid md:grid-cols-3">
+      <section id="content" class="col-span-2">
+        <!-- all content dynamiclladd here -->
+      </section>
+      <!-- sidebar menu content -->
+      <aside class="bg-slate-400 p-2">
+        <div class="collapse collapse-plus">
+          <input type="checkbox" class="peer" />
+          <div
+            class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+            MILESTONE-7
+          </div>
+          <div
+            class="collapse-content text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content p-0">
+            <ul class="menu">
+              <li><a onclick="moduleOne()">Module-1: How JS And Browser Works</a></li>
+              <li><a onclick="moduleTwo()">Module-2:</a></li>
+              <li><a>Item 3</a></li>
+            </ul>
           </div>
         </div>
-      </header>
-      <!-- main section -->
-      <main class="md:grid md:grid-cols-3">
-        <section id="content" class="col-span-2">
-          <!-- all content dynamiclladd here -->
-        </section>
-        <!-- sidebar menu content -->
-        <aside class="bg-slate-400 p-2">
-          <div class="collapse collapse-plus">
-            <input type="checkbox" class="peer" /> 
-            <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-              MILESTONE-7
-            </div>
-            <div class="collapse-content text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content p-0"> 
-              <ul class="menu">
-                <li><a onclick="moduleOne()" >Module-1: How JS And Browser Works</a></li>
-                <li><a onclick="moduleTwo()">Module-2:</a></li>
-                <li><a>Item 3</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- milestone 7 list close -->
-        </aside>
-      </main>
+        <!-- milestone 7 list close -->
+      </aside>
+    </main>
+  </div>
+  <div class="w-[500px] mx-auto text-center">
+    <h2 class="btn my-2" id="text">Count Start</h2>
+    <div>
+      <button class="btn" id="start">Start</button>
+      <button class="btn" id="run">Clear</button>
+      <button class="btn" id="stop">Stop</button>
     </div>
-    <div class="w-[500px] mx-auto text-center">
-      <h2 class="btn my-2" id="text">Count Start</h2>
-      <div>
-        <button class="btn" id="start">Start</button>
-        <button class="btn" id="run">Run</button>
-        <button class="btn" id="stop">Stop</button>
-      </div>
-    </div>
-    <script>
-      let num = 0;
-      const stInter = setInterval( () =>{
+  </div>
+  <script>
+    let num = 0;
+    let stInter = null;
+
+    function startCount() {
+      stInter = setInterval(() => {
         document.getElementById("text").innerText = num++;
-        
       }, 1000);
-      // const interValId = (stInter, 1000);
-      document.getElementById("start").addEventListener('click', function(){
-        clearInterval(stInter)
-      })
-    </script>
-    <!-- script tag -->
-    <script src="practice.js"></script>
-    <script src="/milestone-6/all-module.js"></script>
-    <script src="/milestone-7/all-module.js"></script>
-  </body>
+    }
+
+    function stopCount() {
+      clearInterval(stInter);
+    }
+
+    document.getElementById("start").addEventListener('click', startCount);
+    document.getElementById("stop").addEventListener('click', stopCount);
+    document.getElementById("run").addEventListener('click', function(){
+      num = 0;
+    })
+  </script>
+  <!-- script tag -->
+  <script src="practice.js"></script>
+  <script src="/milestone-6/all-module.js"></script>
+  <script src="/milestone-7/all-module.js"></script>
+</body>
+
 </html>

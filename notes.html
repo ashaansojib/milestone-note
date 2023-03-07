@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Note Book</title>
+    <!-- daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-800 text-white">
+    <div class="w-[1200px] mx-auto bg-slate-700">
+        <!-- header -->
+        <header class="">
+            <div class="navbar">
+                <div class="flex-1">
+                  <a class="text-2xl font-semibold">Sojib</a>
+                </div>
+                <div class="flex-none">
+                  <ul class="menu menu-horizontal px-1">
+                    <li>
+                        <a>News Projects</a>
+                    </li>
+                    <li tabindex="0"><a>Animation Projects</a>
+                      <ul class="bg-zinc-700">
+                        <li><a>Submenu 1</a></li>
+                        <li><a>Submenu 2</a></li>
+                      </ul>
+                    </li>
+                    <li><a>Portfolio Projects</a></li>
+                  </ul>
+                </div>
+              </div>
+              <hr>
+        </header>
+        <!-- main body content -->
+        <main class="lg:grid lg:grid-cols-3">
+            <!-- body content -->
+            <section id="body-content" class="col-span-2">
+
+            </section>
+            <!-- sidebar area -->
+            <aside id="sidebar">
+                <div class="collapse">
+                    <input type="checkbox" class="peer" /> 
+                    <div class="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
+                      Click me to show/hide content
+                    </div>
+                    <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content"> 
+                      <p>hello</p>
+                    </div>
+                  </div>
+            </aside>
+        </main>
+        <!-- footer head -->
+        <section id="footer-head">
+
+        </section>
+        <footer id="footer">
+
+        </footer>
+    </div>
+    <!-- javaScript sourch link -->
+</body>
+
+</html>
