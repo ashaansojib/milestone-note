@@ -12,17 +12,25 @@
 </head>
 <body class="bg-zinc-800 text-white">
     <header class="container mx-auto">
-        <nav class="lg:grid lg:grid-cols-3 bg-slate-500 p-2">
+        <nav class="lg:grid lg:grid-cols-3 items-center bg-slate-500 p-4">
             <div>
-                <h2>MY NOTES</h2>
+                <h2 class="text-2xl font-semibold">MY NOTES</h2>
             </div>
             <div class="col-span-2">
-                <ul class="flex justify-center">
-                    <li class="mx-1"><a class="p-2 font-semibold" href="">Popular</a></li>
-                    <li class="mx-1"><a class="p-2 font-semibold" href="">Projects</a></li>
-                    <li class="mx-1"><a class="p-2 font-semibold" href="">Blogs</a></li>
-                    <li class="mx-1"><a class="p-2 font-semibold" href="">Javascript</a></li>
-                    <li class="mx-1"><a class="p-2 font-semibold" href="">Portfolio</a></li>
+                <ul class="flex justify-end">
+                    <li class="mx-1"><a class="nav-link" href="">Popular</a></li>
+                    <li class="mx-1"><a class="nav-link" href="">Projects</a></li>
+                    <li class="mx-1"><a class="nav-link" href="">Blogs</a></li>
+                    <li class="mx-1"><a class="nav-link" href="">Javascript</a></li>
+                    <li class="mx-1"><a class="nav-link" href="">Portfolio</a></li>
+
+                    <div class="dropdown dropdown-bottom dropdown-end dropdown-hover">
+                        <li tabindex="0"><a class="nav-link" href="">Projects</a></li>
+                        <ul tabindex="0" class="dropdown-content menu p-2 bg-blue-600 shadow rounded-box w-96">
+                          <li><a class="text-2xl">Portfolio Success Projects</a></li>
+                          <li><a>Item 2</a></li>
+                        </ul>
+                    </div>
                 </ul>
             </div>
         </nav>
@@ -31,6 +39,7 @@
             <div class="lg:grid lg:grid-cols-2 p-2 h-[350px] bg-neutral-600">
                 <div>
                     <h2 id="banner-title" class="text-2xl font-semibold">Welcome To My Website...</h2>
+                   
                 </div>
                 <div>
                     <div class="flex justify-center items-center h-[350px]">
@@ -46,7 +55,8 @@
             <div class="lg:col-span-2 p-2 bg-white text-gray-800">
                 <article class="p-4 shadow-lg shadow-gray-500/50">
                     <h2 id="post-title" class="text-2xl font-semibold"></h2>
-                    
+                    <!-- modal area -->
+
                     <p id="post-info"></p>
                 </article>
             </div>
@@ -54,6 +64,7 @@
             <div class="p-2 bg-purple-500">
                 <div class="">
                     <div class="note">
+                        <h2 class="sidebar-title">All Milestone Important Topic</h2>
                         <div class="collapse mb-2">
                             <input type="checkbox" class="peer" />
                             <div class="collapse-title bg-blue-700">
@@ -74,9 +85,7 @@
                             </div>
                             <div class="collapse-content p-0">
                                 <ul class="menu bg-slate-500">
-                                    <li class="hover-bordered my-1"><a>Module-1: How JS Work and Browser Debug</a></li>
-                                    <li class="hover-bordered my-1"><a>Module-1: How JS Work and Browser Debug</a></li>
-                                    <li class="hover-bordered my-1"><a>Module-1: How JS Work and Browser Debug</a></li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -84,7 +93,7 @@
                     <hr>
                     <!-- milestone area close -->
                     <div class="count my-2 bg-slate-400">
-                        <h2 class="p-2 bg-slate-500 text-center font-semibold">Spinner with setInterval...</h2>
+                        <h2 class="sidebar-title">Spinner with setInterval...</h2>
                         <div class="text-center p-2">
                             <button id="count" class="btn my-2">Counter</button>
                             <p>
@@ -97,7 +106,7 @@
                     <hr>
                     <!-- error fiexd website -->
                     <div class="my-2 bg-slate-400">
-                        <h2 class="p-2 bg-slate-500 text-center font-semibold">Error Handleing Projects</h2>
+                        <h2 class="sidebar-title">Error Handleing Projects</h2>
                         <ul class="menu ">
                             <li><a target="_blank" href="/error-projects/nosto-bank/index.html">1. Nosto Baper Bank Fiexd!!</a></li>
                             <li><a target="_blank" href="/error-projects/ranga-store-vanga/index.html">2. Clothing shoping Fiexd!!</a></li>
@@ -108,6 +117,22 @@
             </div>
         </section>
     </main>
+    <section class="container mx-auto text-black">
+        <!-- modal html area -->
+        <label onclick="modalOpen()" for="my-modal-5" class="btn ">open modal</label>
+
+        <input type="checkbox" id="my-modal-5" class="modal-toggle" />
+        <div class="modal">
+            <div class="modal-box w-2/4 max-w-5xl">
+                <h3 id="title" class="font-bold text-2xl">Congratulations random Internet user!</h3>
+                <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+
+                <div class="modal-action">
+                <label for="my-modal-5" class="btn">Close</label>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- footer area -->
     <footer>
         <!-- footer header conter -->
