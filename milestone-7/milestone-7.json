@@ -1,0 +1,16 @@
+{
+    "mileStoneSeven" : [
+        {
+            "id" : "ModuleOne",
+            "name" : "What is Browser Debug and How Js works?"
+        },
+        {
+            "id" : "ModuleTwo",
+            "name" : "How to work JavaScript setInterval And setTimeOut"
+        },
+        {
+            "id" : "ModuleThree",
+            "name" : "Exploring Chrome DevTool Options.."
+        }
+    ]
+}

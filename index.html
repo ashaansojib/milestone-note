@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- my style link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- daisy ui cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -37,7 +39,7 @@
         <!-- header banner -->
         <div>
             <div class="lg:grid lg:grid-cols-2 p-2 h-[350px] bg-neutral-600">
-                <div>
+                <div id="conta">
                     <h2 id="banner-title" class="text-2xl font-semibold">Welcome To My Website...</h2>
                    
                 </div>
@@ -55,7 +57,6 @@
             <div class="lg:col-span-2 p-2 bg-white text-gray-800">
                 <article class="p-4 shadow-lg shadow-gray-500/50">
                     <h2 id="post-title" class="text-2xl font-semibold"></h2>
-                    <!-- modal area -->
 
                     <p id="post-info"></p>
                 </article>
@@ -71,10 +72,8 @@
                                 MILESTONE -7 :
                             </div>
                             <div class="collapse-content p-0">
-                                <ul class="menu bg-slate-500">
-                                    <li class="hover-bordered my-1"><a onclick="JavaScriptAndDebug()">Module-1: How JS Work and Browser Debug</a></li>
-                                    <li class="hover-bordered my-1"><a onclick="aboutSetTimeOut()">Module-1: How JS setTimeOut Works</a></li>
-                                    <li class="hover-bordered my-1"><a onclick="aboutSetInterVal()">Module-1: How JS setInterVal Works</a></li>
+                                <ul id="sidebar-toggle" class="menu bg-slate-500">
+                                    <!-- add here sidebar list item about mileston important topic -->
                                 </ul>
                             </div>
                         </div>
@@ -117,21 +116,33 @@
             </div>
         </section>
     </main>
-    <section class="container mx-auto text-black">
-        <!-- modal html area -->
-        <label onclick="modalOpen()" for="my-modal-5" class="btn ">open modal</label>
-
-        <input type="checkbox" id="my-modal-5" class="modal-toggle" />
-        <div class="modal">
-            <div class="modal-box w-2/4 max-w-5xl">
-                <h3 id="title" class="font-bold text-2xl">Congratulations random Internet user!</h3>
-                <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-
-                <div class="modal-action">
-                <label for="my-modal-5" class="btn">Close</label>
+    <section>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Launch static backdrop modal
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                ...
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
                 </div>
             </div>
+            </div>
         </div>
+    </section>
+    <section id="modal-content" class="container mx-auto text-black">
+        
     </section>
     <!-- footer area -->
     <footer>
@@ -201,7 +212,8 @@
         </div>
     </footer>
     <!-- script area -->
+
+    <script src="milestone-api.js"></script>
     <script src="app.js"></script>
-    <script src="milestone-7/all-module.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 // dropdown menu default style
 const dropdownList = document.querySelectorAll('.nav-link');
 for(const dropdown of dropdownList){
